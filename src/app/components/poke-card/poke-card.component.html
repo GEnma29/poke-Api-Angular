@@ -1,0 +1,26 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title-group>
+      <mat-card-title class="title">{{selectPokemon.name}}</mat-card-title>
+      <mat-card-subtitle class="containerType">
+        <span  *ngFor="let type of statsPokemon.types"
+                class="type">
+                {{type.type.name}}
+            </span>
+      </mat-card-subtitle>
+      <mat-card-subtitle>
+        Experience: {{statsPokemon.base_experience}}
+      </mat-card-subtitle>
+      <mat-card-subtitle>
+        Height: {{statsPokemon.height}}
+      </mat-card-subtitle>
+      <mat-card-subtitle>
+        Weight: {{statsPokemon.weight}}
+      </mat-card-subtitle>
+      <img mat-card-md-image src={{selectPokemon.imgUrl}}  alt='Image of a {{selectPokemon.name}}'>
+    </mat-card-title-group>
+  </mat-card-header>
+  <mat-card-content>
+    Stack Pokemon
+  </mat-card-content>
+</mat-card>

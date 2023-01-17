@@ -10,4 +10,19 @@ table {
   td, th {
     width: 25%;
   }
+  section {
+    display: table;
+  }
+  .icon-button {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.35em;
+    border-radius: 50%;
+    background-color: transparent;
+    border: none;
+  
+    .white-icon {
+      color: white;
+  }
+  }
   

@@ -1,0 +1,21 @@
+.example-card {
+  min-width: 300px;
+  align-self: center;
+}
+.title {
+  color: #FFFF;
+  margin-bottom: .2rem;
+}
+.containerType {
+  margin-bottom: .5rem;
+  justify-content: space-between;
+}
+.type {
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  border: 1px solid #fff;
+  font-size: 12px;
+}
+.type :last-child {
+  margin-left: 1rem;
+}

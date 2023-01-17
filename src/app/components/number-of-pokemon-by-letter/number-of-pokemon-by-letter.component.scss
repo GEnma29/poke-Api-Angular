@@ -1,0 +1,22 @@
+.card-container{
+    display: flex;
+    margin-top: 1.5rem;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+}
+.container-letters{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+}
+.letters {
+    font-size: .75rem;
+    cursor: pointer;
+}
+.active {
+    color: white;
+}

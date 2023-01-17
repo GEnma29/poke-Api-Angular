@@ -6,6 +6,10 @@ import { HomeComponent } from './modules';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { PokemonTableComponent } from "./components/pokemon-table/pokemon-table.component";
+import { HttpClientModule } from '@angular/common/http';
+import { PokeCardComponent } from './components/poke-card';
+import { NumberOfPokemonByLetterComponent } from './components/number-of-pokemon-by-letter/number-of-pokemon-by-letter.component';
+
 
 
 @NgModule({
@@ -18,9 +22,12 @@ import { PokemonTableComponent } from "./components/pokemon-table/pokemon-table.
     imports: [
         BrowserModule,
         AppRoutingModule,
+        HttpClientModule,
         BrowserAnimationsModule,
         ToolbarComponent,
-        PokemonTableComponent
+        PokemonTableComponent,
+        PokeCardComponent,
+        NumberOfPokemonByLetterComponent
     ]
 })
 export class AppModule { }
