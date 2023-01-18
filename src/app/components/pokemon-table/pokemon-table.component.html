@@ -6,18 +6,19 @@
 <div class="mat-elevation-z8">
   <table mat-table [dataSource]="dataSource" matSort>
     <ng-container matColumnDef="id">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>details</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Id</th>
       <td mat-cell  *matCellDef="let row">
-        <button class="button icon-button" (click)="onPokemonClicked(row)" mat-icon-button color="primary" aria-label="info pokemon details">
-          <mat-icon class="white-icon">info</mat-icon>
-        </button>
+        {{row.id}}
       </td>
     </ng-container>
 
     <ng-container matColumnDef="img">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>img</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Appearance</th>
       <td mat-cell *matCellDef="let row">
-        <img src={{row.imgUrl}} />
+        <img  
+        [src]="row.id > 904 ? 'https://upload.wikimedia.org/wikipedia/commons/5/51/Pokebola-pokeball-png-0.png' : row.imgUrl"
+        [ngClass]="{ 'poke-ball-img': row.id > 904}"
+        />
       </td>
     </ng-container>
 
@@ -27,7 +28,7 @@
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns" (click)="onPokemonClicked(row)"></tr>
 
     <!-- Row shown when there is no matching data. -->
     <tr class="mat-row" *matNoDataRow>

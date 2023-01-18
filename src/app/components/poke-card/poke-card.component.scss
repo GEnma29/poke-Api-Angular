@@ -1,12 +1,22 @@
 .example-card {
   min-width: 300px;
   align-self: center;
+  padding-bottom: .5rem;
+  background-image:
+   url(https://jcgato93.github.io/pokedex/assets/images/pokeball-background.png); 
+  background-repeat: no-repeat;  
+  background-position: center right; 
+  background-size: 150px; 
+  padding: .5rem;  
+  border-radius: 1rem;
+
 }
 .title {
   color: #FFFF;
   margin-bottom: .2rem;
 }
-.containerType {
+.container-type {
+  display: flex;
   margin-bottom: .5rem;
   justify-content: space-between;
 }
@@ -16,6 +26,15 @@
   border: 1px solid #fff;
   font-size: 12px;
 }
-.type :last-child {
-  margin-left: 1rem;
+.poke-ball-img {
+  height: 5rem;
+  width: 5rem;
+  margin-left: 1.5rem;
 }
+.subtitle {
+  margin-top: .2rem;
+  span {
+    font-weight: bold;
+  }
+}
+

@@ -6,6 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { PokemonService } from 'src/app/services';
 import { pokemon, ResponsePokemonById, statsPokemon } from 'src/app/models';
 import { adapterPokemonStats } from 'src/app/adapters/pokemon-stacks.adapter';
+import { initialStatsPokemon } from 'src/app/constants';
 
 @Component({
   selector: 'app-poke-card',
@@ -17,29 +18,7 @@ import { adapterPokemonStats } from 'src/app/adapters/pokemon-stacks.adapter';
 export class PokeCardComponent implements OnInit {
 constructor( private pokemonService: PokemonService){}
 public selectPokemon!: pokemon
-public statsPokemon: statsPokemon = {
-  types: [
-    {
-      slot: 3,
-      type: {
-        name: 'string',
-        url: 'string',
-      },
-    }
-  ],
-  base_experience: 0,
-  height: 12,
-  weight: 65,
-  stats:[{
-    base_stat: 4,
-    effort: 4,
-    stat: {
-      name: 'string',
-      url: 'string',
-    }
-  }]
-  
-}
+public statsPokemon: statsPokemon = initialStatsPokemon
 
 getPokemon(){
    this.pokemonService.selectedPokemon$.subscribe(res =>{

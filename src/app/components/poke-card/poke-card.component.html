@@ -2,25 +2,26 @@
   <mat-card-header>
     <mat-card-title-group>
       <mat-card-title class="title">{{selectPokemon.name}}</mat-card-title>
-      <mat-card-subtitle class="containerType">
+      <mat-card-subtitle class="conatiner-type">
         <span  *ngFor="let type of statsPokemon.types"
                 class="type">
                 {{type.type.name}}
             </span>
       </mat-card-subtitle>
-      <mat-card-subtitle>
-        Experience: {{statsPokemon.base_experience}}
+      <mat-card-subtitle class="subtitle">
+        Experience: <span>{{statsPokemon.base_experience}}</span>
       </mat-card-subtitle>
-      <mat-card-subtitle>
-        Height: {{statsPokemon.height}}
+      <mat-card-subtitle class="subtitle">
+        Height: <span>{{statsPokemon.height}}</span>
       </mat-card-subtitle>
-      <mat-card-subtitle>
-        Weight: {{statsPokemon.weight}}
+      <mat-card-subtitle class="subtitle">
+        Weight: <span>{{statsPokemon.weight}}</span>
       </mat-card-subtitle>
-      <img mat-card-md-image src={{selectPokemon.imgUrl}}  alt='Image of a {{selectPokemon.name}}'>
+      <img  
+        [src]="selectPokemon.id > 904 ? 'https://upload.wikimedia.org/wikipedia/commons/5/51/Pokebola-pokeball-png-0.png' : selectPokemon.imgUrl"
+        [ngClass]="{'poke-ball-img': selectPokemon.id > 904}"
+        alt='Image of a {{selectPokemon.name}}'
+        />
     </mat-card-title-group>
   </mat-card-header>
-  <mat-card-content>
-    Stack Pokemon
-  </mat-card-content>
 </mat-card>

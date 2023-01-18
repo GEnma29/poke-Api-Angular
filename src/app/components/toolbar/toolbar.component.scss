@@ -1,4 +1,14 @@
-
 .example-spacer {
-    flex: 1 1 auto;
-  }
+  flex: 1 1 auto;
+}
+.container-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.img-poke-ball {
+  height: 2rem;
+  width: 2rem;
+  margin-right: 1rem;
+}

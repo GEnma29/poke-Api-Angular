@@ -1,6 +1,13 @@
 .card-container{
     display: flex;
     margin-top: 1.5rem;
+    border-radius: 1rem;
+    color: azure;
+}
+.subtitle {
+     span {
+        font-weight: bold;
+     }
 }
 
 .main-container {
@@ -15,6 +22,7 @@
 }
 .letters {
     font-size: .75rem;
+    color: black;
     cursor: pointer;
 }
 .active {

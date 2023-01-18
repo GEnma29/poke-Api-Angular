@@ -9,11 +9,12 @@ import { ResponseApi } from 'src/app/models';
 import { adapterPokemonTable } from 'src/app/adapters/pokemon-table.adapter';
 import { pokemon } from 'src/app/models/pokemon.models';
 import {MatIconModule } from '@angular/material/icon';
+import { CommonModule } from '@angular/common';
 
 @Component({
   standalone: true,
   selector: 'app-pokemon-table',
-  imports: [MatPaginatorModule, MatTableModule, MatFormFieldModule, MatInputModule, MatSortModule, MatIconModule],
+  imports: [CommonModule,MatPaginatorModule, MatTableModule, MatFormFieldModule, MatInputModule, MatSortModule, MatIconModule],
   templateUrl: './pokemon-table.component.html',
   styleUrls: ['./pokemon-table.component.scss']
 })

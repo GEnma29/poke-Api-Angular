@@ -1,5 +1,8 @@
 <mat-card class="card-container">
   <mat-card-content class="main-container">
+    <mat-card-title>
+      Resume list of pokemon
+    </mat-card-title>
     <div class="container-letters">
       <p
         *ngFor="let letter of letters"
@@ -9,6 +12,6 @@
         {{ letter }}
       </p>
     </div>
-    <mat-card-subtitle> numbers of pokemon : {{numberOfResults}}</mat-card-subtitle>
+    <mat-card-subtitle class="subtitle"> numbers of pokemon : <span>{{numberOfResults}}</span></mat-card-subtitle>
   </mat-card-content>
 </mat-card>
