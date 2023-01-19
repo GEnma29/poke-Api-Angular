@@ -1,5 +1,5 @@
 <mat-card class="example-card">
-  <mat-card-header>
+  <mat-card-header *ngIf="initialState === 'info'">
     <mat-card-title-group>
       <mat-card-title class="title">{{selectPokemon.name}}</mat-card-title>
       <mat-card-subtitle class="conatiner-type">
@@ -24,4 +24,21 @@
         />
     </mat-card-title-group>
   </mat-card-header>
+  <mat-card-content *ngIf="initialState === 'stats'">
+    <mat-card-title class="title">{{selectPokemon.name}}</mat-card-title>
+    <mat-card-subtitle  *ngFor="let stat of statsPokemon.stats " >
+      <div class="container-stat">
+        <p>{{stat.stat.name}}: {{stat.base_stat}}</p>
+      </div>
+      <mat-progress-bar mode="determinate" value={{stat.base_stat}}></mat-progress-bar>
+    </mat-card-subtitle>
+
+
+  </mat-card-content>>
+  <mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="onChangeState('info')">Info</button>
+      <button mat-button (click)="onChangeState('stats')">Stats</button>
+    </mat-card-actions>
+  </mat-card-content>
 </mat-card>
